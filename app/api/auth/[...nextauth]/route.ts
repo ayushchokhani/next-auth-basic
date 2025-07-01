@@ -19,6 +19,7 @@ const handler = NextAuth({
         const user = {
           id: 1,
           username: 'ayush',
+          email: "ayush@gmail.com",
           password: 'ayush',
         }
 
@@ -29,9 +30,9 @@ const handler = NextAuth({
         }
       },
     }),
-
     
   ],
+  secret: process.env.NEXTAUTH_SECRET
 })
 
 export { handler as GET, handler as POST }
